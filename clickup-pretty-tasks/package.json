@@ -1,0 +1,84 @@
+{
+  "name": "clickup-pretty-tasks",
+  "displayName": "Clickup Pretty Tasks in code",
+  "version": "0.1.1",
+  "publisher": "everix",
+  "license": "MIT",
+  "icon": "/media/ico.png",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "repository": {
+    "url": "https://github.com/everix-io/vscode-extensions"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.configureClikupPrettyTasks",
+        "title": "ClickUp Pretty Tasks: Configure ClickUp"
+      },
+      {
+        "command": "extension.getClickUpTask",
+        "title": "ClickUp Pretty Tasks: Get ClickUp Task Details by Custom ID"
+      },
+      {
+        "command": "extension.openClickUpTask",
+        "title": "ClickUp Pretty Tasks: Open ClickUp Task Details by Custom ID"
+      },
+      {
+        "command": "extension.getClickUpTaskByInternalId",
+        "title": "ClickUp Pretty Tasks: Get ClickUp Task Details by Internal ID"
+      },
+      {
+        "command": "extension.openClickUpTaskByInternalId",
+        "title": "ClickUp Pretty Tasks: Open ClickUp Task Details by Internal ID"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "ClickUp Pretty Tasks Settings",
+      "properties": {
+        "clickup-pretty-tasks.clickup-apikey": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "API Key for ClickUp"
+        },
+        "clickup-pretty-tasks.clickup-teamid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Id of a team in ClickUp"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+	"@types/node": "18.x",
+    "@types/vscode": "^1.84.0",
+	"@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  }
+}
