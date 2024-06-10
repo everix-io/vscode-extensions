@@ -4,7 +4,9 @@ ClickUp Pretty Tasks displays tasks description and status right in the code whe
 
 ## Features
  - Decorate task links with task status + details
-        ![preview](media/demoscreen.png)
+        ![image](https://github.com/everix-io/vscode-extensions/assets/522467/a0b38c41-b002-4e2c-a9b9-975e08f12c13)
+
+ 
  - Run commands: 
     - Get ClickUp Task Details by Internal ID
     - Open ClickUp Task Details by Internal ID
