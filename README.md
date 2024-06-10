@@ -1,3 +1,3 @@
 # vs code extensions
 
-- [ClickUp Pretty tasks](/clickup-pretty-tasks/Readme.md)
+- [ClickUp Pretty tasks](/clickup-pretty-tasks/README.md)
